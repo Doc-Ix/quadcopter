@@ -60,10 +60,11 @@ if done:
 
 The algorithm provided comes to a stable solution keeping the quadcopter around z=100, creating a stable reward stream.
 
-Episode 1-500: Plot of rewards
+**Episode 1-500: Plot of rewards:**
+![Rewards](https://github.com/Doc-Ix/quadcopter/blob/master/pictures/quadcopter_rewards.png)
 
-Episode 1-500: Plot of positions
- 
+**Episode 1-500: Plot of positions:**
+ ![Positions](https://github.com/Doc-Ix/quadcopter/blob/master/pictures/quadcopter_positions.png)
 
 <a id="Acknowledgments"></a>
 ## Acknowledgments

@@ -14,7 +14,7 @@ This repository contains my results of the project "Teach a quadcopter how to fl
 <a id="Content"></a>
 ## Content of Repository
 
-- **Quadcopter_Project.ipynb:** A jupyter notebook file with training and results of the project
+- **Quadcopter_Project.ipynb:** Jupyter notebook file containing training of agent and results of the project
 - **DDPG_Agent.py:** Definition of reinforcement learning agent (following DDPG design)
 - **Networks.py:** Definition of actor and critic networks using Keras
 - **task.py:** Definiton of environment providing feedback for agent

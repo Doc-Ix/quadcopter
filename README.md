@@ -40,7 +40,7 @@ Final hyperparameters:
 
 ### Reward Function
 
-The goal was to create an algorithm that keeps the quadcopter at an hight of z=100. The action space is limited to providing thrust to the four motors of the quadcopter. A reward function that did solely focus on the postion (x,y,z) of the quadcopter with respect to the desired target position was implemented. Then a hyperbolic tangent was applied to keep the outputs in the intervall [-1,1]:
+The goal was to create an algorithm that keeps the quadcopter at a hight of z=100. The action space is limited to providing thrust to the four motors of the quadcopter. A reward function that does solely focus on the postion (x,y,z) of the quadcopter with respect to the desired target position was implemented. Then a hyperbolic tangent was applied to keep the outputs in the intervall [-1,1]:
 
 ```Python
 reward = np.tanh(1 - 0.003*(abs(self.sim.pose[:3] - self.target_pos))).sum()

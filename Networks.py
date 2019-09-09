@@ -53,10 +53,8 @@ class Actor:
         action_gradients = layers.Input(shape=(self.action_size,))
         loss = K.mean(-action_gradients * actions)
 
-        # Incorporate any additional losses here (e.g. from regularizers)
 
         # Define optimizer and training function
-
         optimizer = optimizers.Adam(lr=0.001)
         updates_op = optimizer.get_updates(params=self.model.trainable_weights, loss=loss)
         self.train_fn = K.function(
@@ -79,8 +77,6 @@ class Critic:
         self.state_size = state_size
         self.action_size = action_size
 
-        # Initialize any other variables here
-
         self.build_model()
 
     def build_model(self):
@@ -97,7 +93,6 @@ class Critic:
         # Add hidden layer(s) for action pathway
         net_actions = layers.Dense(units=100,kernel_regularizer=layers.regularizers.l2(1e-6))(actions)                             
                                   
-        # Try different layer sizes, activations, add batch normalization, regularizers, etc.
 
         # Combine state and action pathways
         net = layers.Add()([net_states, net_actions])
